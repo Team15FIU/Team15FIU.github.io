@@ -19,6 +19,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
+import * as firebase from 'firebase';
 
 // styles
 import "assets/css/bootstrap.min.css";
@@ -31,6 +32,19 @@ import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
 import RegisterPage from "views/examples/RegisterPage.js";
 // others
+
+var firebaseConfig = {
+  apiKey: "AIzaSyBgCRch0C208pv8rNU6OX0crbsAEJUyThA",
+  authDomain: "team15-cen.firebaseapp.com",
+  databaseURL: "https://team15-cen.firebaseio.com",
+  projectId: "team15-cen",
+  storageBucket: "team15-cen.appspot.com",
+  messagingSenderId: "738528211869",
+  appId: "1:738528211869:web:d02fc897c82e7e89723574",
+  measurementId: "G-S2YZ6ZDNRN"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <BrowserRouter>
