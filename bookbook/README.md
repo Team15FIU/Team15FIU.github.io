@@ -1,3 +1,5 @@
+Old local code from a prior machine, kinda works but wasn't what I used for the Sprint 3 demo. Will upload later tonight.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
