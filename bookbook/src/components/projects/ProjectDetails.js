@@ -12,10 +12,12 @@ const ProjectDetails = (props) => {
             <div className="card-content">
               <span className="card-title">{project.title}</span>
               <p>{project.content}</p>
-              <div>Written by {project.author}</div>
-            <div>Released on {project.releaseDate}</div>
+              <p>By: {project.author}</p>
+              <p>Genre: {project.genre}</p>
+              <p>Publisher: {project.publisher}</p>
+              <p>Release Date: {project.releaseDate}</p>
+              <p>Price: ${project.price}</p>
             </div>
-            
           </div>
         </div>
       )
@@ -29,9 +31,10 @@ const ProjectDetails = (props) => {
   }
 
 const mapStateToProps = (state, ownProps) => {
-    const id = ownProps.match.params.id;
-    const projects = state.firestore.data.projects;
-    const project = projects ? projects[id] : null
+    
+  const id = ownProps.match.params.id;
+    const Books = state.firestore.data.Books;
+    const project = Books ? Books[id] : null
     return {
         project: project
     }
@@ -40,6 +43,6 @@ const mapStateToProps = (state, ownProps) => {
 export default compose(
     connect(mapStateToProps),
     firestoreConnect([
-        { collection: 'projects'}
+        { collection: 'Books'}
     ])
 )(ProjectDetails)

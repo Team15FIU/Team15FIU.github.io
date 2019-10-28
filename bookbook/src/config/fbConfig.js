@@ -3,16 +3,17 @@ import 'firebase/firestore'
 import 'firebase/auth'
 
 var config = {
-  apiKey: "AIzaSyDZvhHCVAm1Dnr2-lG7UuuUBexWoMgXVgU",
-    authDomain: "temp-b9763.firebaseapp.com",
-    databaseURL: "https://temp-b9763.firebaseio.com",
-    projectId: "temp-b9763",
-    storageBucket: "temp-b9763.appspot.com",
-    messagingSenderId: "572615655469",
-    appId: "1:572615655469:web:730209fbc654a5b3d938a4",
-    measurementId: "G-5T2K1CTK14"
-  };
+  apiKey: "AIzaSyBgCRch0C208pv8rNU6OX0crbsAEJUyThA",
+    authDomain: "team15-cen.firebaseapp.com",
+    databaseURL: "https://team15-cen.firebaseio.com",
+    projectId: "team15-cen",
+    storageBucket: "team15-cen.appspot.com",
+    messagingSenderId: "738528211869",
+    appId: "1:738528211869:web:a921a5712d98a93c723574",
+    measurementId: "G-7QH6M24RD8"
 
+
+  };
   // Initialize Firebase
   firebase.initializeApp(config);
   firebase.firestore().settings({ timestampsInSnapshots: true})
