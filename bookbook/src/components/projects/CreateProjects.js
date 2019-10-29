@@ -52,6 +52,10 @@ class CreateProject extends Component {
             <label htmlFor="releaseDate">Release Date</label>
           </div>
           <div className="input-field">
+            <textarea id="price" className="materialize-textarea" onChange={this.handleChange}></textarea>
+            <label htmlFor="price">Price</label>
+          </div>
+          <div className="input-field">
             <textarea id="cover" className="materialize-textarea" onChange={this.handleChange}></textarea>
             <label htmlFor="cover">Cover</label>
           </div>
