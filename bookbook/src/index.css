@@ -7,3 +7,17 @@ body {
 .Input {
   width: 10%;
 }
+
+.cover{
+  
+    height: 294px;
+    width: 200px;
+}
+
+.bookTitle{
+  font-size: 18px;
+}
+
+.bookDesc{
+  font-size: 12px;
+}

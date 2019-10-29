@@ -10,13 +10,17 @@ const ProjectDetails = (props) => {
         <div className="container section project-details">
           <div className="card z-depth-0">
             <div className="card-content">
-              <span className="card-title">{project.title}</span>
-              <p>{project.content}</p>
-              <p>By: {project.author}</p>
-              <p>Genre: {project.genre}</p>
-              <p>Publisher: {project.publisher}</p>
-              <p>Release Date: {project.releaseDate}</p>
-              <p>Price: ${project.price}</p>
+              <img src={project.cover} class="cover"></img>
+              <p class="bookTitle">{project.title}</p>
+              <div class="bookDesc">
+                <p>{project.content}</p>
+                <p>By: {project.author}</p>
+                <p>Genre: {project.genre}</p>
+                <p>Publisher: {project.publisher}</p>
+                <p>Release Date: {project.releaseDate}</p>
+                <p>Price: ${project.price}</p>
+              </div>
+              
             </div>
           </div>
         </div>

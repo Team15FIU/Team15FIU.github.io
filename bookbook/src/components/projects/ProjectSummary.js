@@ -1,11 +1,13 @@
 import React from 'react'
+import { shortenTitle } from '../../store/actions/projectFunctions'
 
 const ProjectSummary = ({project}) => {
     return (
         <div className="card z-depth-0 project-summary">
                 <div className="card-content grey-text text-darken-3">
-                    <span className="card-title">{project.title}</span>
-                    <p>By: {project.author}</p>
+                    <img src={project.cover} class="cover"></img>
+                    <p class="bookTitle">{project.title}</p>
+                    <p class="bookDesc">By: {project.author}</p>
                 </div>
             </div>
     )
