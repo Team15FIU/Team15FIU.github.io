@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createProject } from '../../store/actions/projectActions'
 
-class CreateProject extends Component {
+class CreateBook extends Component {
   state = {
     title: '',
     author: '',
@@ -75,4 +75,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(null, mapDispatchToProps)(CreateProject)
+export default connect(null, mapDispatchToProps)(CreateBook)

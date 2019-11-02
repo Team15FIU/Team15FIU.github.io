@@ -3,22 +3,22 @@ import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 
-const ProjectDetails = (props) => {
-    const { project } = props;
-    if (project) {
+const BookDetails = (props) => {
+    const { book } = props;
+    if (book) {
       return (
         <div className="container section project-details">
           <div className="card z-depth-0">
             <div className="card-content">
-              <img src={project.cover} class="cover"></img>
-              <p class="bookTitle">{project.title}</p>
+              <img src={book.cover} class="cover"></img>
+              <p class="bookTitle">{book.title}</p>
               <div class="bookDesc">
-                <p>{project.content}</p>
-                <p>By: {project.author}</p>
-                <p>Genre: {project.genre}</p>
-                <p>Publisher: {project.publisher}</p>
-                <p>Release Date: {project.releaseDate}</p>
-                <p>Price: ${project.price}</p>
+                <p>{book.content}</p>
+                <p>By: {book.author}</p>
+                <p>Genre: {book.genre}</p>
+                <p>Publisher: {book.publisher}</p>
+                <p>Release Date: {book.releaseDate}</p>
+                <p>Price: ${book.price}</p>
               </div>
               
             </div>
@@ -28,7 +28,7 @@ const ProjectDetails = (props) => {
     } else {
       return (
         <div className="container center">
-          <p>Loading project...</p>
+          <p>Loading book...</p>
         </div>
       )
     }
@@ -38,9 +38,9 @@ const mapStateToProps = (state, ownProps) => {
     
   const id = ownProps.match.params.id;
     const Books = state.firestore.data.Books;
-    const project = Books ? Books[id] : null
+    const book = Books ? Books[id] : null
     return {
-        project: project
+        book
     }
 }
 
@@ -49,4 +49,4 @@ export default compose(
     firestoreConnect([
         { collection: 'Books'}
     ])
-)(ProjectDetails)
+)(BookDetails)

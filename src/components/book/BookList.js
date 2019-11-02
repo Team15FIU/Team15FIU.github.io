@@ -1,15 +1,15 @@
 import React from 'react'
 import Dashboard from '../dashboard/Dashboard'
-import ProjectSummary from './ProjectSummary'
+import BookSummary from './BookSummary'
 import { Link } from 'react-router-dom'
 
-const ProjectList = ({projects}) => {
+const BookList = ({books}) => {
     return (
         <div className="project-list section">
-            { projects && projects.map(project => {
+            { books && books.map(book => {
                 return(
-                    <Link to={'/project/' + project.id}>
-                     <ProjectSummary project={project} key={project.id}/>
+                    <Link to={'/book/' + book.id}>
+                     <BookSummary book={book} key={book.id}/>
                     </Link>
                 )
             })}
@@ -18,4 +18,4 @@ const ProjectList = ({projects}) => {
     )
 }
 
-export default ProjectList
+export default BookList

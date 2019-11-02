@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import SignedInLinks from './SignedInLinks'
 import SignedOutLinks from './SignedOutLinks'
 import Search from './Search'
-import './../../../src/assets/img/'
+
 
 
 const Navbar = () => {
