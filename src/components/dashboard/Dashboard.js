@@ -23,21 +23,30 @@ class Dashboard extends Component {
 
     return (
       <div className="dashboard container">
-
         <div className="row">
-          <div class="input-field col s12">
-            <select ref={(select) => {this.select = select}} onChange={(e) => this.setState({ sort: e.target.value })} value={this.state.sort}>
-              <option value="none" disabled selected>Sorting...</option>
-              <option value="titleAsc">Title (Up)</option>
-              <option value="titleDesc">Title (Down)</option>
-            </select>
+          <div class="input-field col s3">
+              <select ref={(select) => {this.select = select}} onChange={(e) => this.setState({ sort: e.target.value })} value={this.state.sort}>
+                <option value="none" disabled selected>Sorting...</option>
+                <option value="titleAsc">Title A-Z</option>
+                <option value="titleDesc">Title Z-A</option>
+                <option value="authorAsc">Author A-Z</option>
+                <option value="auhtorDesc">Author Z-A</option>
+                <option value="priceAsc">Price (Low)</option>
+                <option value="priceDesc">Price( High)</option>
+                <option value="ratingAsc">Rating (Low)</option>
+                <option value="ratingDesc">Rating (High)</option>
+                <option value="dateAsc">Date (Most Recent)</option>
+                <option value="dateDesc">Date (Oldest)</option>
+              </select>
           </div>
-          <div className="col s12 m6">
+        </div>
+        <div className="row">
+          <div className="col s12">
             <BookList books={Books} sort={this.state.sort} />
           </div>
-          <div className="col s12 m5 offset-m1">
+          {/* <div className="col s12 m5 offset-m1">
             <Notifications />
-          </div>
+          </div> */}
         </div>
       </div>
     )
