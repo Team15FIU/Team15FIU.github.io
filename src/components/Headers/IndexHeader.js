@@ -13,7 +13,7 @@ function IndexHeader() {
         className="page-header page-header-xs"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/antoine-barres.jpg") + ")"
+            "url(" + require("assets/img/newyork.jpg") + ")"
         }}
       >
         <div className="filter" />
