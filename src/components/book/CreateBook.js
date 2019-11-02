@@ -10,6 +10,7 @@ class CreateBook extends Component {
     genre: '',
     publisher: '',
     releaseDate: '',
+    rating: '',
   }
   handleChange = (e) => {
     this.setState({
@@ -60,7 +61,10 @@ class CreateBook extends Component {
             <label htmlFor="cover">Cover</label>
           </div>
           <div className="input-field">
-            
+            <textarea id="rating" className="materialize-textarea" onChange={this.handleChange}></textarea>
+            <label htmlFor="rating">Rating</label>
+          </div>
+          <div className="input-field">
             <button className="btn cyan">Create</button>
           </div>
         </form>
