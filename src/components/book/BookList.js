@@ -107,9 +107,65 @@ const getSorter = (sort) => {
     }
 }
 
+const filterTypes = {
+    genreNonfi: (book) => {
+        return book.genre == 'Non-Fiction';
+    },
+    genreScifi: (book) => {
+        return book.genre == 'Science Fiction';
+    },
+    genreFant: (book) => {
+        return book.genre == 'Fantasy';
+    },
+    rating1: (book) => {
+        return book.rating >= 1;
+    },
+    rating2: (book) => {
+        return book.rating >= 2;
+    },
+    rating3: (book) => {
+        return book.rating >= 3;
+    },
+    rating4: (book) => {
+        return book.rating >= 4;
+    },
+    rating5: (book) => {
+        return book.rating >= 5;
+    },
+    top: (book) => {
+        return book.isTopSeller;
+    }  
+}
+
+const getFilter = (filter) => {
+    switch(filter){
+        case "genreNonfi":
+            return filterTypes.genreNonfi;
+        case "genreScifi":
+            return filterTypes.genreScifi;
+        case "genreFant":
+            return filterTypes.genreFant;
+        case "rating1":
+            return filterTypes.rating1;
+        case "rating2":
+            return filterTypes.rating2;
+        case "rating3":
+            return filterTypes.rating3;
+        case "rating4":
+            return filterTypes.rating4;
+        case "rating5":
+            return filterTypes.rating5;
+        case "top":
+            return filterTypes.top;
+        default:
+            return (() => true)
+    }
+}
+
 const BookList = ({books, sort, filter}) => {
     if(books){
         books.sort(getSorter(sort))
+        books = books.filter(getFilter(filter))
     }
 
     return (

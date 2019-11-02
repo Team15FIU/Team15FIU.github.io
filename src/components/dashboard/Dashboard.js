@@ -9,11 +9,11 @@ import M from 'materialize-css'
 class Dashboard extends Component {
   constructor(props) {
     super(props)
-    this.state = { sort: "none" }
+    this.state = { sort: "none", filter: "none" }
   }
 
   componentDidMount(){
-    M.FormSelect.init(this.select)
+    M.FormSelect.init(document.querySelectorAll('.dashboard select'))
   }
 
   render() {
@@ -25,7 +25,7 @@ class Dashboard extends Component {
       <div className="dashboard container">
         <div className="row">
           <div class="input-field col s3">
-              <select ref={(select) => {this.select = select}} onChange={(e) => this.setState({ sort: e.target.value })} value={this.state.sort}>
+              <select onChange={(e) => this.setState({ sort: e.target.value })} value={this.state.sort}>
                 <option value="none" disabled selected>Sorting...</option>
                 <option value="titleAsc">Title A-Z</option>
                 <option value="titleDesc">Title Z-A</option>
@@ -39,10 +39,30 @@ class Dashboard extends Component {
                 <option value="dateDesc">Date (Oldest)</option>
               </select>
           </div>
+          <div class="input-field col s3">
+              <select onChange={(e) => this.setState({ filter: e.target.value })} value={this.state.filter}>
+                <option value="none" disabled selected>Filter By...</option>
+                <optgroup label="Genre">
+                  <option value="genreNonfi">Non-Fiction</option>
+                  <option value="genreScifi">Science Fiction</option>
+                  <option value="genreFant">Fantasy</option>
+                </optgroup>
+                <optgroup label="Rating">
+                  <option value="rating1">★</option>
+                  <option value="rating2">★★</option>
+                  <option value="rating3">★★★</option>
+                  <option value="rating4">★★★★</option>
+                  <option value="rating5">★★★★★</option>
+                </optgroup>
+                <optgroup label="Top Sellers">
+                  <option value="top">All Top Selling Books</option>
+                </optgroup>
+              </select>
+          </div>
         </div>
         <div className="row">
           <div className="col s12">
-            <BookList books={Books} sort={this.state.sort} />
+            <BookList books={Books} sort={this.state.sort} filter={this.state.filter}/>
           </div>
           {/* <div className="col s12 m5 offset-m1">
             <Notifications />
