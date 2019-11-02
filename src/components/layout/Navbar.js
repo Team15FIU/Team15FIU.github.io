@@ -9,7 +9,7 @@ const Navbar = () => {
     return (
         <nav className="nav-wrapper grey darken-3">
             <div className="container">
-                <Link to='/' className="brand-logo">BookBook</Link>
+                <Link to='/' className="brand-logo">BookBook NYC</Link>
                 <SignedInLinks />
                 <SignedOutLinks />
             </div>
