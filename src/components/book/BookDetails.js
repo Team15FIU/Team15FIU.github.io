@@ -19,6 +19,7 @@ const BookDetails = (props) => {
                 <p>Publisher: {book.publisher}</p>
                 <p>Release Date: {book.releaseDate}</p>
                 <p>Price: ${book.price}</p>
+                <p>Rating: {book.rating}</p>
                 <p>{book.description}</p>
               </div>
               
