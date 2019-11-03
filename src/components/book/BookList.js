@@ -172,7 +172,9 @@ const BookList = ({books, sort, filter}) => {
         <div className="project-list section">
             { books && books.map(book => {
                 return(
-                    <Link style={{display: "inline-block", width: "100%", maxWidth: "250px"}} 
+                    <Link 
+                    // style={{display: "inline-block", width: "100%", maxWidth: "250px"}}
+                        className="col s3"
                         to={'/book/' + book.id}>
                      <BookSummary book={book} key={book.id}/>
                     </Link>

@@ -8,7 +8,7 @@ import Search from './Search'
 
 const Navbar = () => {
     return (
-        <nav className="nav-wrapper grey darken-3"
+        <nav className="nav-wrapper black -3"
        >
             <div className="container">
                 <Link to='/' className="brand-logo">BookBook NYC</Link>

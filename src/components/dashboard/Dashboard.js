@@ -23,7 +23,7 @@ class Dashboard extends Component {
 
     return (
       <div className="dashboard container">
-        <div className="row">
+        <div className="row s12">
           <div class="input-field col s3">
               <select onChange={(e) => this.setState({ sort: e.target.value })} value={this.state.sort}>
                 <option value="none" disabled selected>Sorting...</option>
@@ -35,8 +35,8 @@ class Dashboard extends Component {
                 <option value="priceDesc">Price( High)</option>
                 <option value="ratingAsc">Rating (Low)</option>
                 <option value="ratingDesc">Rating (High)</option>
-                <option value="dateAsc">Date (Most Recent)</option>
-                <option value="dateDesc">Date (Oldest)</option>
+                <option value="dateDesc">Date (Most Recent)</option>
+                <option value="dateAsc">Date (Oldest)</option>
               </select>
           </div>
           <div class="input-field col s3">
@@ -60,10 +60,8 @@ class Dashboard extends Component {
               </select>
           </div>
         </div>
-        <div className="row">
-          <div className="col s12">
+        <div className="row s12">
             <BookList books={Books} sort={this.state.sort} filter={this.state.filter}/>
-          </div>
           {/* <div className="col s12 m5 offset-m1">
             <Notifications />
           </div> */}
