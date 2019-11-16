@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { NavLink  } from 'react-router-dom'
-import CatalogLinks from '../layout/CatalogLinks'
-import SignedinLinks from '../layout/SignedInLinks'
 
 class Home extends Component {
     render() {

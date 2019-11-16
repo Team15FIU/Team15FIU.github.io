@@ -9,10 +9,10 @@ const Footer = () => {
                                 <h5 class="white-text">BookBook NYC</h5>
                                 <p class="grey-text text-lighten-4">BookBook catalogs your favorites books from new releases, to timeless classics.</p>
                                 <a href="https://www.twitter.com/bookbooknyc" color="white">
-                                    <img src="twitterlogo.png"></img>
+                                    <img src="twitterlogo.png" alt="Twitter Logo"></img>
                                 </a>
                                 <a href="https://www.instagram.com/bookbooknyc">
-                                    <img src="instagramlogo.png"></img>
+                                    <img src="instagramlogo.png" alt="Instagram Logo"></img>
                                 </a>
                             </div>
                             <div class="col l4 offset-l2 s12">
