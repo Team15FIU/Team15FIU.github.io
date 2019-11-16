@@ -9,28 +9,32 @@ class Home extends Component {
             <div id="parent">
                 <div class="row">
                     <div class="col s12 center-align">
-                        <h1>Welcome to BookBook NYC!</h1>
+                        <h2>Welcome to BookBook NYC!</h2>
                     </div>
                     <NavLink to ='/catalog'>
-                        <div class="col s3 offset-s3 center-align">
+                        <div class="col s3 offset-s3 center-align card-panel hoverable">
                             <div class="card-panel cyan z-depth-0 white-text">
-                                <h3>
+                                <h5>
                                     Catalog
-                                </h3>
+                                </h5>
                             </div>
                         </div>
                     </NavLink>
+                    
                     <NavLink to ='/signup'>
-                        <div class="col s3 center-align">
+                        <div class="col s3 center-align card-panel hoverable">
                             <div class="card-panel cyan z-depth-0 white-text">
-                                <h3>
+                                <h5>
                                     Sign Up
-                                </h3>
+                                </h5>
                             </div>
                         </div>
                     </NavLink>
                 </div>
                 <div class="white-text">
+                                <h5>
+                                    Ghetto way to make footer stick LMAO
+                                </h5>
                                 <h5>
                                     Ghetto way to make footer stick LMAO
                                 </h5>
