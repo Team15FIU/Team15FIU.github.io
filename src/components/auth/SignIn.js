@@ -33,6 +33,36 @@ class SignIn extends Component {
                     </div>
 
                 </form>
+                <div class="white-text">
+                                <h5>
+                                    Ghetto way to make footer stick LMAO
+                                </h5>
+                                <h5>
+                                    Ghetto way to make footer stick LMAO
+                                </h5>
+                                <h5>
+                                    Ghetto way to make footer stick LMAO
+                                </h5>
+                                <h5>
+                                    Ghetto way to make footer stick LMAO
+                                </h5>
+                                <h5>
+                                    Ghetto way to make footer stick LMAO
+                                </h5>
+                                <h5>
+                                    Ghetto way to make footer stick LMAO
+                                </h5>
+                                <h5>
+                                    Ghetto way to make footer stick LMAO
+                                </h5>
+                                <h5>
+                                    Ghetto way to make footer stick LMAO
+                                </h5>
+                                <h5>
+                                    Ghetto way to make footer stick LMAO
+                                </h5>
+                                
+                </div>
                 
             </div>
         )
