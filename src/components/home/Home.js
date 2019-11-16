@@ -1,42 +1,35 @@
 import React, { Component } from 'react'
+import { NavLink  } from 'react-router-dom'
 
-class SignIn extends Component {
-    state = {
-        identification: '',
-        password: '',
-    }
-
-    handleChange = (e) => {
-        this.setState({
-            [e.target.id]: e.target.value
-        })
-    }
-    handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(this.state);
-    }
+class Home extends Component {
     render() {
         return (
-            <div className="container">
-                <form onSubmit={this.handleSubmit} className="white">
-                    <h5 className="grey-text text-darken-3">Sign In</h5>
-                    <div className="input-field">
-                        <label htmlFor="identification">ID</label>
-                        <input type="text" id="identification" onChange={this.handleChange}/>
+            <div id="parent">
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <h2>Welcome to BookBook NYC!</h2>
                     </div>
-                    <div className="input-field">
-                        <label htmlFor="password">Password</label>
-                        <input type="password" id="password" onChange={this.handleChange}/>
-                    </div>
-                    <div className="input-field">
-                        <button className="btn cyan z-depth-0">Login</button>
-                    </div>
-
-                </form>
-                <div class="white-text">
+                    <NavLink to ='/catalog'>
+                        <div class="col s3 offset-s3 center-align card-panel hoverable">
+                            <div class="card-panel cyan z-depth-0 white-text">
                                 <h5>
-                                    Ghetto way to make footer stick LMAO
+                                    Catalog
                                 </h5>
+                            </div>
+                        </div>
+                    </NavLink>
+                    
+                    <NavLink to ='/signup'>
+                        <div class="col s3 center-align card-panel hoverable">
+                            <div class="card-panel cyan z-depth-0 white-text">
+                                <h5>
+                                    Sign Up
+                                </h5>
+                            </div>
+                        </div>
+                    </NavLink>
+                </div>
+                <div class="white-text">
                                 <h5>
                                     Ghetto way to make footer stick LMAO
                                 </h5>
@@ -63,10 +56,11 @@ class SignIn extends Component {
                                 </h5>
                                 
                 </div>
-                
             </div>
+
+            
         )
     }
 }
 
-export default SignIn
+export default Home

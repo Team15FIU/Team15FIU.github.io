@@ -2,6 +2,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .Input {
@@ -21,3 +24,17 @@ body {
 .bookDesc{
   font-size: 12px;
 }
+
+main {
+  flex: 1 0 auto;
+}
+
+a:link {
+  color: white;
+}
+
+
+a:visited {
+  color: white;
+}
+

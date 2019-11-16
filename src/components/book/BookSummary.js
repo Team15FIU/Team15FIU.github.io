@@ -1,5 +1,4 @@
 import React from 'react'
-import { shortenTitle } from '../../store/actions/projectFunctions'
 
 const BookSummary = ({book}) => {
     if (book.title.length > 40)
