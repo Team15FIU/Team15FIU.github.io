@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Dashboard from '../dashboard/Dashboard'
 import BookSummary from './BookSummary'
+import ReactPaginate from 'react-paginate';
 import { Link } from 'react-router-dom'
 
 const sortTypes = {
@@ -162,10 +163,23 @@ const getFilter = (filter) => {
     }
 }
 
+
+
 const BookList = ({books, sort, filter}) => {
+    const [pageNum, setPageNum] = useState(0);
+    const pageSize = 2;
+
+    const limitBooks = (data) => {
+        setPageNum(data.selected)
+    }
+
+    let pages = 0;
+
     if(books){
         books.sort(getSorter(sort))
         books = books.filter(getFilter(filter))
+        pages = Math.ceil(books.length/pageSize)
+        books = books.slice(pageNum * pageSize, (pageNum + 1) * pageSize);
     }
 
     return (
@@ -180,7 +194,23 @@ const BookList = ({books, sort, filter}) => {
                     </Link>
                 )
             })}
-            
+            <div className="col s12">
+            { books && 
+            <ReactPaginate
+                previousLabel={'previous'}
+                nextLabel={'next'}
+                breakLabel={'...'}
+                breakClassName={'break-me'}
+                pageCount={pages}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={5}
+                onPageChange={limitBooks}
+                containerClassName={'pagination'}
+                subContainerClassName={'pages pagination'}
+                activeClassName={'active'}
+                />
+            }                
+            </div>
         </div>
     )
 }
