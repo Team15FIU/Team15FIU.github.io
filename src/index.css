@@ -1,10 +1,27 @@
+html{
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  height: 100%;
+}
+
+#root {
+  height: 100%
+}
+
+.App{
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
+  height: 100%;
+}
+
+/* Select whatever element comes after the nav because we're 
+not using a standard single div element to wrap page body content */
+.App > nav + *{
+  flex: 1 1 100%;
 }
 
 .Input {
