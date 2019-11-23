@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Dashboard from './components/dashboard/Dashboard'
 import BookDetails from './components/book/BookDetails'
+import BookAuthors from './components/book/BookAuthors'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import CreateBook from './components/book/CreateBook'
@@ -23,6 +24,7 @@ class App extends Component {
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
             <Route path='/create' component={CreateBook} />
+            <Route path='/author/:filter' component={BookAuthors} />
           </Switch>
           <Footer />
         </div>
