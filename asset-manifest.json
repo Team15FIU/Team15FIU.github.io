@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Team15FIU/Team15FIU.github.io/static/css/main.e43af1c5.chunk.css",
+    "main.js": "/Team15FIU/Team15FIU.github.io/static/js/main.bf3fc0ec.chunk.js",
+    "main.js.map": "/Team15FIU/Team15FIU.github.io/static/js/main.bf3fc0ec.chunk.js.map",
+    "runtime-main.js": "/Team15FIU/Team15FIU.github.io/static/js/runtime-main.351f6909.js",
+    "runtime-main.js.map": "/Team15FIU/Team15FIU.github.io/static/js/runtime-main.351f6909.js.map",
+    "static/js/2.7ce36ca6.chunk.js": "/Team15FIU/Team15FIU.github.io/static/js/2.7ce36ca6.chunk.js",
+    "static/js/2.7ce36ca6.chunk.js.map": "/Team15FIU/Team15FIU.github.io/static/js/2.7ce36ca6.chunk.js.map",
+    "index.html": "/Team15FIU/Team15FIU.github.io/index.html",
+    "precache-manifest.82c77fa9def38760d68fd04c71a9934f.js": "/Team15FIU/Team15FIU.github.io/precache-manifest.82c77fa9def38760d68fd04c71a9934f.js",
+    "service-worker.js": "/Team15FIU/Team15FIU.github.io/service-worker.js",
+    "static/css/main.e43af1c5.chunk.css.map": "/Team15FIU/Team15FIU.github.io/static/css/main.e43af1c5.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.351f6909.js",
+    "static/js/2.7ce36ca6.chunk.js",
+    "static/css/main.e43af1c5.chunk.css",
+    "static/js/main.bf3fc0ec.chunk.js"
+  ]
+}

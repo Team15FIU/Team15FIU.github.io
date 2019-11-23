@@ -1,0 +1,2 @@
+body,html{height:100%}body{margin:0;padding:0;font-family:sans-serif}#root,.App{height:100%}.App{display:flex;flex-direction:column}.App>nav+*{flex:1 1 100%}.Input{width:10%}.cover{height:294px;width:200px}.bookTitle{font-size:18px}.bookDesc{font-size:15px;padding-top:20px}main{flex:1 0 auto}a:link,a:visited{color:#fff}.pagination{text-align:center}
+/*# sourceMappingURL=main.e43af1c5.chunk.css.map */
