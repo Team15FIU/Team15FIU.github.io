@@ -6,6 +6,7 @@ class CreateBook extends Component {
   state = {
     title: '',
     author: '',
+    bio: '',
     description: '',
     genre: '',
     publisher: '',
@@ -35,6 +36,10 @@ class CreateBook extends Component {
           <div className="input-field">
             <textarea id="author" className="materialize-textarea" onChange={this.handleChange}></textarea>
             <label htmlFor="author">Author</label>
+          </div>
+          <div className="input-field">
+            <textarea id="bio" className="materialize-textarea" onChange={this.handleChange}></textarea>
+            <label htmlFor="bio">Bio</label>
           </div>
           <div className="input-field">
             <textarea id="description" className="materialize-textarea" onChange={this.handleChange}></textarea>

@@ -3,22 +3,32 @@ import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import { NavLink, Link  } from 'react-router-dom'
+import { ImageZoom } from './ImageZoom'
+import { booleanLiteral } from '@babel/types'
+import mediumZoom from 'medium-zoom'
+
 
 
 const BookDetails = (props) => {
     const { book } = props;
+    const zoom = mediumZoom({background: '#000', margin: 48})
     if (book) {
       return (
         <div className="container section project-details">
           <div className="card z-depth-0">
             <div className="card-content">
-              <div className="image" onClick={() => {alert('Supposed to enlarge, but nope')}}>
-                <img src={book.cover} class="cover"></img>
+              <div className="image">
+                <ImageZoom src={book.cover} alt={book.title} zoom={zoom} color="#000000" />
               </div>
               <p class="bookTitle">{book.title}</p>
               <div class="bookDesc">
                 <p>{book.content}</p>
-                <p>By: {book.author}</p>
+                <Link to={'/author/' + book.author}>
+                  <p className="black-text">
+                    By: {book.author}
+                  </p>
+                </Link>
+                <p>Bio: {book.bio}</p>
                 <p>Genre: {book.genre}</p>
                 <p>Publisher: {book.publisher}</p>
                 <p>Release Date: {book.releaseDate}</p>
