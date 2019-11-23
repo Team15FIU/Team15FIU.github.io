@@ -188,7 +188,7 @@ const BookList = ({books, sort, filter}) => {
     }
 
     return (
-        <div className="project-list section">
+        <div className="project-list section row s12">
             { books && books.map(book => {
                 return(
                     <Link 

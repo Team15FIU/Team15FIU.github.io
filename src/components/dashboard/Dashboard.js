@@ -57,9 +57,7 @@ class Dashboard extends Component {
               </select>
           </div>
         </div>
-        <div className="row s12">
-            <BookList books={Books} sort={this.state.sort} filter={this.state.filter}/>
-        </div>
+        <BookList books={Books} sort={this.state.sort} filter={this.state.filter}/>
       </div>
     )
   }

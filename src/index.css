@@ -28,11 +28,30 @@ not using a standard single div element to wrap page body content */
   width: 10%;
 }
 
+.bookDisplay{
+  position: relative;
+}
+
+.bookDisplay .price{
+  display: block;
+  position: absolute;
+  bottom: 4%;
+  left: 4%;
+  font-weight: bold;
+  background: green;
+  color: white;
+  padding: 2px 4px;
+  border-radius: 5px;
+  border: rgba(0,0,0,.2) solid 1px;
+  box-shadow: 0 0 3px rgba(0,0,0,1)
+}
+
 .cover{
   
     height: 294px;
     width: 200px;
 }
+
 
 .bookTitle{
   font-size: 18px;
