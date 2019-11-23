@@ -5,6 +5,7 @@
   "dependencies": {
     "firebase": "^7.2.1",
     "materialize-css": "^1.0.0-rc.2",
+    "medium-zoom": "^1.0.4",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-paginate": "^6.3.2",
