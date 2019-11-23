@@ -135,7 +135,10 @@ const filterTypes = {
     },
     top: (book) => {
         return book.isTopSeller;
-    }  
+    },  
+    author: (book) => {
+        return book.author = "J. K. Rowling";
+    }
 }
 
 const getFilter = (filter) => {
@@ -158,6 +161,8 @@ const getFilter = (filter) => {
             return filterTypes.rating5;
         case "top":
             return filterTypes.top;
+        case "author":
+            return filterTypes.author;
         default:
             return (() => true)
     }
@@ -167,7 +172,7 @@ const getFilter = (filter) => {
 
 const BookList = ({books, sort, filter}) => {
     const [pageNum, setPageNum] = useState(0);
-    const pageSize = 2;
+    const pageSize = 8;
 
     const limitBooks = (data) => {
         setPageNum(data.selected)
@@ -187,7 +192,6 @@ const BookList = ({books, sort, filter}) => {
             { books && books.map(book => {
                 return(
                     <Link 
-                    // style={{display: "inline-block", width: "100%", maxWidth: "250px"}}
                         className="col s3"
                         to={'/book/' + book.id}>
                      <BookSummary book={book} key={book.id}/>

@@ -39,7 +39,8 @@ not using a standard single div element to wrap page body content */
 }
 
 .bookDesc{
-  font-size: 12px;
+  font-size: 15px;
+  padding-top: 20px;
 }
 
 main {

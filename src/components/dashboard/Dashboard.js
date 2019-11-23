@@ -16,8 +16,6 @@ class Dashboard extends Component {
   }
 
   render() {
-
-    // console.log(this.props);
     const { Books } = this.props;
 
     return (
@@ -61,9 +59,6 @@ class Dashboard extends Component {
         </div>
         <div className="row s12">
             <BookList books={Books} sort={this.state.sort} filter={this.state.filter}/>
-          {/* <div className="col s12 m5 offset-m1">
-            <Notifications />
-          </div> */}
         </div>
       </div>
     )
@@ -71,7 +66,6 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = (state) => {
-  // console.log(state);
   return {
     Books: state.firestore.ordered.Books
   }

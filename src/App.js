@@ -8,6 +8,7 @@ import SignUp from './components/auth/SignUp'
 import CreateBook from './components/book/CreateBook'
 import Home from './components/home/Home'
 import Footer from './components/layout/Footer'
+import BookAuthors from './components/book/BookAuthors'
 // import EnlargeImage from './components/book/EnlargeImage'
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
             <Route path='/create' component={CreateBook} />
+            <Route path='/author/:filter' component={BookAuthors} />
           </Switch>
           <Footer />
         </div>
