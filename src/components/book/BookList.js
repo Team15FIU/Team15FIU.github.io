@@ -172,7 +172,7 @@ const getFilter = (filter) => {
 
 const BookList = ({books, sort, filter}) => {
     const [pageNum, setPageNum] = useState(0);
-    const pageSize = 8;
+    const pageSize = 10;
 
     const limitBooks = (data) => {
         setPageNum(data.selected)
