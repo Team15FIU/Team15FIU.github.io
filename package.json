@@ -2,7 +2,7 @@
   "name": "bookbook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Team15FIU/Team15FIU.github.io",
+  "homepage": "https://team15fiu.github.io",
   "dependencies": {
     "firebase": "^7.2.1",
     "gh-pages": "^2.1.1",
