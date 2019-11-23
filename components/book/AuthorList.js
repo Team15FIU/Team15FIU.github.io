@@ -24,6 +24,7 @@ const BookList = ({books, filter}) => {
     return (
         <div className="project-list section">
             <h5>Books by: {author}</h5>
+            <h6>{author.bio}</h6>
             { books && books.map(book => {
                 return(
                     <Link 
