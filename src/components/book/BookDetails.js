@@ -24,7 +24,7 @@ const BookDetails = (props) => {
               <div class="bookDesc">
                 <p>{book.content}</p>
                 <Link to={'/author/' + book.author}>
-                  <p className="black-text">
+                  <p className="black-text" style={{textDecoration: 'underline'}}>
                     By: {book.author}
                   </p>
                 </Link>
